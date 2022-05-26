@@ -213,7 +213,7 @@ background-color:  #188CE8;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-
+    width: 1600px;
      
 }
 .hero-title{
@@ -636,6 +636,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 .examples-title {
     margin-bottom: 4px;
 }
+
 /* #endregion examples */
 /* #region features */
 
@@ -654,11 +655,17 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     border: var(--btn-bg-cl);
     color: var(--main-bg-cl);
     cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .features-button:focus {
     background-color: var(--btn-bg-cl);
     border: var(--btn-bg-cl);
     color: var(--main-bg-cl);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -677,7 +684,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 .features-item:last-child{
     margin-right: 0;
 }
-.features-item:hover{
+/* .features-item:hover{
 
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
                 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -687,7 +694,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
     0px 1px 2px rgba(0, 0, 0, 0.08),
      0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+} */
 .features-span{
 padding-top: 6px;
     padding-bottom: 6px;
