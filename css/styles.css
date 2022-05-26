@@ -50,11 +50,7 @@ ul {
     padding: 0;
 }
 /* #endregion basic-root */
-/* .flex-class{
-    display: flex;
-
-} */
-
+/* #region container */
 .container {
     /* outline: 3px solid red; */
     width: 1200px;
@@ -63,6 +59,7 @@ ul {
     padding-left: 15px;
     padding-right: 15px;
 }
+/* #endregion container */
 /* #region header */
 .logo{
 color: var(--accent-cl);
@@ -94,7 +91,8 @@ font-family:var(--secondary-font);
         line-height: 1.14;
         letter-spacing: 0.02em;
         font-size: 14px;
-        
+        display: flex;
+        align-items: center;
 
         
         
@@ -210,7 +208,8 @@ background-color:  #188CE8;
 
 .hero{
     background-color: var(--secondary-bg-cl);
-    
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
+            url(../images/hero-bcg.webp);
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -246,8 +245,79 @@ color: var(--main-bg-cl);
 .hero-button{
     border: 0px;
 }
-
 /* #endregion hero */
+/* #region svg */
+.div-svg{
+text-align: center;
+padding-top: 25px;
+padding-bottom: 25px;
+padding-left: 100px;
+padding-right: 100px;
+background-color: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+}
+.benefits-svg{
+width: 70px;
+height: 70px;
+}
+
+.team-link{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+       
+      
+}
+
+.team-link:hover{
+    background-color:var(--accent-cl);
+}
+.team-link:focus {
+    background-color: var(--accent-cl);
+}
+.social-ul{
+    display: flex;
+    margin-top: 16px;
+        margin-left: 32px;
+        margin-right: 32px;
+        margin-bottom: 30px;       
+}
+.team-link:hover .social-item{
+    fill: #ffffff;
+}
+.team-link:focus .social-item {
+    fill: #ffffff;
+}
+
+.social-item{
+ fill: #AFB1B8;  
+}
+
+.social-li:not(:last-child){
+margin-right: 10px;
+}
+.mail-svg{
+    fill: currentColor;
+    margin-right: 10px;
+}
+.mail-svg:hover{
+    fill: var(--accent-cl);
+}
+.mail-svg:focus{
+    fill: var(--accent-cl);
+}
+ .contacts-text:hover .mail-svg{
+     color: var(--accent-cl);
+ }
+ .ftr-svg{
+     fill:var(--main-bg-cl);
+ }
+/* #endregion svg */
 /* #region benefits-section */
 .section{
     
@@ -364,11 +434,59 @@ img{
 .team{
     width: 270px;
     margin-right: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+     0px 1px 1px rgba(0, 0, 0, 0.14),
+     0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
  .team:last-child{
      margin-right: 0;
  }   
  /* #endregion team */
+
+ /* #region customers */
+ .our-customers{
+     padding-top: 94px;
+     padding-bottom: 94px;
+ }
+ .customers-list{
+     display: flex;
+ }
+ .customers-title{
+    font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+        margin-bottom: 50px;
+ }
+ .customers-svg{
+    fill: #AFB1B8;
+ }
+ .customers-item{
+    padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 32px;
+        padding-right: 32px;
+        box-sizing: border-box;
+        border: 1px solid #AFB1B8;
+            border-radius: 4px;
+ }
+ .customers-item:not(:last-child){
+     margin-right: 30px;
+ }
+ .customers-link{
+     
+ }
+ .customers-item:hover .customers-svg,
+ .customers-item:focus .customers-svg {
+     fill: #2196F3;}
+     .customers-item:hover,
+     .customers-item:focus{
+         border-color: #2196F3;
+     }
+
+ /* #endregion customers */
 /* #region footer */
  .footer{
     background-color: var(--secondary-bg-cl);
@@ -377,7 +495,9 @@ img{
 
 }
 
+
 .address{
+    display: flex;
     font-style: normal;
     margin-top: 20px;
     
@@ -416,8 +536,46 @@ img{
 .footer-item:last-child{
     margin-bottom: 0;
 }
+
+.ftr-links-title{
+    padding-bottom: 20px;
+    font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--main-bg-cl);
+}
+.ftr-div{
+    display: flex;
+    align-items: baseline;
+}
+
+.ftr-link{
+    display: flex;
+
+}
+.ftr-links{
+    margin-left: 70px;
+}
+.svg-item{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+}
+.svg-item:hover,
+.svg-item:focus{
+    background-color: var(--accent-cl);
+
+}
+
+
 /* #endregion footer */
-/* portfolio */
 /* #region examples */
 .examples{
     text-decoration: none;
@@ -443,6 +601,7 @@ img{
 .examples-item {
     margin-right: 30px;
     margin-bottom: 30px;
+
 }
 
 .examples-item:nth-last-child(-n+3) {
@@ -452,6 +611,16 @@ img{
 
 .examples-item:nth-child(3n) {
     margin-right: 0;
+}
+.examples-item:hover{
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+ 0px 4px 4px rgba(0, 0, 0, 0.06),
+ 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.examples-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .examples-div {
@@ -507,6 +676,17 @@ img{
 }
 .features-item:last-child{
     margin-right: 0;
+}
+.features-item:hover{
+
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 1px 2px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.features-item:focus{
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .features-span{
 padding-top: 6px;
