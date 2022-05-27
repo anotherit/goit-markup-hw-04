@@ -213,7 +213,12 @@ background-color:  #188CE8;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    width: 1600px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: auto;
+    position: relative;
+    background-repeat: no-repeat;
      
 }
 .hero-title{
@@ -249,14 +254,13 @@ color: var(--main-bg-cl);
 /* #region svg */
 .div-svg{
 text-align: center;
-padding-top: 25px;
-padding-bottom: 25px;
-padding-left: 100px;
-padding-right: 100px;
 background-color: #F5F4FA;
     border-radius: 4px;
     margin-bottom: 30px;
-
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .benefits-svg{
 width: 70px;
@@ -283,10 +287,9 @@ height: 70px;
 .social-ul{
     display: flex;
     margin-top: 16px;
-        margin-left: 32px;
-        margin-right: 32px;
-        margin-bottom: 30px;       
-}
+    justify-content: center;
+            
+} 
 .team-link:hover .social-item{
     fill: #ffffff;
 }
@@ -438,6 +441,7 @@ img{
      0px 1px 1px rgba(0, 0, 0, 0.14),
      0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    background-color: white;
 }
  .team:last-child{
      margin-right: 0;
@@ -464,25 +468,29 @@ img{
     fill: #AFB1B8;
  }
  .customers-item{
-    padding-top: 16px;
-        padding-bottom: 16px;
-        padding-left: 32px;
-        padding-right: 32px;
-        box-sizing: border-box;
-        border: 1px solid #AFB1B8;
-            border-radius: 4px;
+     width: 170px;
+     height: 92px;
+     
+    
  }
  .customers-item:not(:last-child){
      margin-right: 30px;
  }
  .customers-link{
+     width: 100%;
+     height: 100%;
+     justify-content: center;
+     display: flex;
+     align-items: center;
      
+        border: 1px solid #AFB1B8;
+        border-radius: 4px;
  }
- .customers-item:hover .customers-svg,
- .customers-item:focus .customers-svg {
+ .customers-link:hover .customers-svg,
+ .customers-link:focus .customers-svg {
      fill: #2196F3;}
-     .customers-item:hover,
-     .customers-item:focus{
+     .customers-link:hover,
+     .customers-link:focus{
          border-color: #2196F3;
      }
 
@@ -511,10 +519,16 @@ img{
 }
 .footer-mail{
     color: var(--footer-txt-cl);
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
 
 }
 .footer-tel{
     color: var(--footer-txt-cl);
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
 
 }
 .footer-mail:hover{
@@ -532,13 +546,14 @@ img{
 }
 .footer-item{
     margin-bottom: 9px;
+    
 }
 .footer-item:last-child{
     margin-bottom: 0;
 }
 
 .ftr-links-title{
-    padding-bottom: 20px;
+   margin-bottom: 20px;
     font-weight: 700;
         font-size: 14px;
         line-height: 1.14;
@@ -644,6 +659,7 @@ display: block;
 
 
 .features-button{
+    padding: 6px,22px;
     background-color: var(--section-bg-cl);
     border: var(--section-bg-cl);
     font-weight: 500;
